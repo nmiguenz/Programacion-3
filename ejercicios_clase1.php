@@ -33,42 +33,18 @@ echo "<br>Ejercicio 4";
     }
     print("<br>la cantidad de numeros iterados es: $contador</br>"); 
 
-    echo "<br>Ejercicio 5";
-        $a = 5;
-        $b = 10;
-        $c = 7;
+echo "<br>Ejercicio 5";
+    $a = 7;
+    $b = 3;
+    $c = 5;
 
-        if ($a<$b)
-        {
-            if($b<$c)
-            {
-                print("<br>el valor medio es: $b</br>"); 
-            }
-            else{
-                print("<br>el valor medio es: $c</br>");
-            }
-        }
-        else if ($b<$a)
-        {
-            if($a<$c)
-            {
-                print("<br>el valor medio es: $a</br>");
-            }
-            else
-            {
-                print("<br>el valor medio es: $c</br>"); 
-            }
-        }
-        else if ($c<$a)
-        {
-            if($a<$c)
-            {
-                print("<br>el valor medio es: $a</br>");
-            }
-            else
-            {
-                print("<br>el valor medio es: $c</br>"); 
-            }
-        }
+    if ($a>$b && $a<$c || $a<$b && $a>$c )
+        print("El numero intermedio es $a");
+    else if($b>$a && $b<$c || $b<$a && $b>$c)
+        print("El numero intermedio es $b");
+    else if($c>$a && $c<$b || $c<$a && $c>$b)
+        print("El numero intermedio es $c");
+    else
+        print("no hay numero intermedio");
 
 ?>
