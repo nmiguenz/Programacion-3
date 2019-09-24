@@ -1,5 +1,5 @@
 <?php
-include_once './alumno.php';
+include './alumno.php';
 /*
 if(!isset($_SESSION['SesionAlumno'])){
     $_SESSION['SesionAlumno'] = array() ;
