@@ -1,0 +1,3 @@
+{"marca":"ni","modelo":"DASDIOLA","patente":"aa254ov","precio":"54820"}
+{"marca":"ni","modelo":"fafafa","patente":"aa254az","precio":"54820"}
+{"marca":"ni","modelo":"fafafa","patente":"aa254az","precio":"54820"}

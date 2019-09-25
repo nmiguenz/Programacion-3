@@ -1,0 +1,1 @@
+{"nombre":"Geraldine","apellido":"Meza","email":"geraldinemeza@gmail.com","foto":{"name":"Chrysanthemum.jpg","type":"image\/jpeg","tmp_name":"C:\\xampp\\tmp\\php46CF.tmp","error":0,"size":879394}}{"nombre":"Carla","apellido":"Vargas","email":"carlavargas@gmail.com","foto":{"name":"Tulips.jpg","type":"image\/jpeg","tmp_name":"C:\\xampp\\tmp\\php7DAC.tmp","error":0,"size":620888}}

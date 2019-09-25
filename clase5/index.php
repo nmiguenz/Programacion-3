@@ -5,12 +5,11 @@ use Psr\Http\Message\ResponseInterface as Response;
 require 'vendor/autoload.php';
 
 $config ['displayErrorDetails']=true;
-$config ['addContentLengthHeader']= false;
+$config ['addContentLengthHeader']= false;  
 
 $app=new \Slim\App(["settings"=> $config]);
 
-/*
-$app->get('[/]',function (Request $request, Response $response){
+$app->get('/alumno/{email}',function (Request $request, Response $response){
     $response->getBody()->write("GET => Bienvenido!!");
     return $response;
 }); //trae recursos   
@@ -27,7 +26,7 @@ $app->delete('[/]',function (Request $request, Response $response){
     $response->getBody()->write("Delete => Bienvenido!!");
     return $response;
 });// Delete: borrar recursos
-*/
+
 
 /**
  * Retorna objetos
