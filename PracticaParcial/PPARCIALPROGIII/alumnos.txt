@@ -1,0 +1,2 @@
+{"nombre":"Ford","apellido":"adsdkjalk","email":"ajsdlka@gmail.com","foto":null}
+{"nombre":"Alana","apellido":"adsdkjalk","email":"ajsdlka@hotmail.com","foto":{"name":"WIN_20190421_14_00_28_Pro.jpg","type":"image\/jpeg","tmp_name":"D:\\Programas\\XAMPP\\tmp\\php30B5.tmp","error":0,"size":155339}}

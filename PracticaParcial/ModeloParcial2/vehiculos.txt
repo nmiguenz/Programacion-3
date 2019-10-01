@@ -1,3 +1,7 @@
-{"marca":"ni","modelo":"DASDIOLA","patente":"aa254ov","precio":"54820"}
-{"marca":"ni","modelo":"fafafa","patente":"aa254az","precio":"54820"}
-{"marca":"ni","modelo":"fafafa","patente":"aa254az","precio":"54820"}
+{"marca":"Ford","modelo":"2019","patente":"aa276OB","precio":"456000","foto":"WIN_20190421_14_00_28_Pro.jpg"}
+{"marca":"Ford","modelo":"2019","patente":"aa276Ox","precio":"456000","foto":"WIN_20190421_14_00_28_Pro.jpg"}
+{"marca":"Ford","modelo":"2019","patente":"aa276Ox","precio":"456000","foto":"WIN_20190421_14_00_28_Pro.jpg"}
+{"marca":"Ford","modelo":"2019","patente":"aa276Ox","precio":"456000","foto":"WIN_20190421_14_00_28_Pro.jpg"}
+{"marca":"Ford","modelo":"2019","patente":"aa276Ox","precio":"456000","foto":"WIN_20190421_14_00_28_Pro.jpg"}
+{"marca":"Ford","modelo":"2018","patente":"aa234og","precio":"45321","foto":"WIN_20190421_13_59_54_Pro.jpg"}
+{"marca":"Ford","modelo":"2018","patente":"aa234oi","precio":"45321","foto":"WIN_20190421_13_59_54_Pro.jpg"}
