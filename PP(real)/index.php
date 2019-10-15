@@ -9,7 +9,7 @@ $config ['displayErrorDetails']=true;
 $config ['addContentLengthHeader']= false;
 $app=new \Slim\App(["settings"=> $config]);
 
-// Ruta: pizzas​ (POST): se ingresa precio, Tipo (“molde” o “piedra”), cantidad( de unidades),sabor
+// Ruta: pizzas​ (POST): se ingresa precio, Tipo (“molde” o “piedra”), cantidad(de unidades),sabor
 // (muzza;jamón; especial), precio y dos imágenes (guardarlas en la carpeta images/pizzas y cambiarles el nombre
 // para que sea único). Se guardan los datos en en el archivo de texto ​Pizza.xxx, ​tomando un id autoincremental
 // como identificador, la combinación tipo - sabor debe ser única.

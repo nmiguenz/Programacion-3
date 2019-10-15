@@ -1,6 +1,7 @@
 <?php
 
 require_once 'funciones/funciones.php';
+session_start();
 
 class Pizza{
     public $precio;
@@ -17,7 +18,7 @@ class Pizza{
         $this->tipo=$tipo;
         $this->cantidad=$cantidad;
         $this->sabor=$sabor;
-        $this->id= $id;
+        $this->id= $_SESSION();
         
         if($foto["name"]){
             $extensionArch = $_FILES["foto"]["name"];
