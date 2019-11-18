@@ -30,8 +30,7 @@ return [
         'db' => [
            'driver' => 'mysql',
             'host' => 'localhost',
-            //el NOMBRE DE LAS TABLAS, POR DEFECTO, VAN EN PLURAL
-            'database' => 'usuarios',
+            'database' => 'sp',
             'username' => 'root',
             'password' => '',
             'charset'   => 'utf8',
