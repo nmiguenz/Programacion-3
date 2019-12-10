@@ -122,8 +122,7 @@ class VehiculosAPI
     }
 
     // caso: sacarTurno (get): Se recibe patente, precio y fecha (día) y se debe guardar en el archivo
-    // turnos.txt, fecha, patente, modelo, precio y tipo de servicio. Si no hay cupo o la materia no existe informar cada
-    // caso particular.
+    // turnos.txt, fecha, patente, modelo, precio y tipo de servicio. 
     public static function sacarTurno($request, $response, $args){
         
         $patente = strtolower($request->getParam("patente"));
@@ -184,9 +183,42 @@ class VehiculosAPI
 
     }
 
+    // caso: servicio(get): Puede recibir el tipo de servicio o la fecha y filtra la tabla de acuerdo al parámetro
+    // pasado
+    public static function servicios($request, $response, $args){
+        
+        $tipo = strtolower($request->getParam("tipo"));
+        $fecha = strtolower($request->getParam("fecha"));
+        
+        if(isset($tipo) || isset($fecha))
+        {
+            if(isset($tipo))
+            {
+                $filtro = $tipo;
+                
+                $listaTurnos = Turno::TraerTurnos();
+
+                $tablaTurnos = Turno::FiltrarLista($listaTurnos, $filtro);
+            }
+            else if (isset($fecha))
+            {
+                $filtro = $fecha;
+
+                $listaTurnos = Turno::TraerTurnos();
+
+                $tablaTurnos = Turno::FiltrarLista($listaTurnos, $filtro);
+            }
+        }
+        echo $tablaTurnos;
+
+        $newResponse = $response->withJson('tabla de servicios creada', 200);
+
+        VehiculosAPI::HacerLog("GET", $request);
+        return $newResponse;
+    }
+
     //logs (GET). Recibe una fecha y muestra los logs posteriores a esta.
-    public static function consultarLog($request, $response, $args)
-    {
+    public static function consultarLog($request, $response, $args){
         $fecha = $request->getParam("fecha");
 
         $fecha = new DateTime($fecha, new DateTimeZone('America/Argentina/Buenos_Aires'));
@@ -211,8 +243,7 @@ class VehiculosAPI
         return $newResponse;
     } 
 
-    public static function HacerLog($caso, $request)
-    {
+    public static function HacerLog($caso, $request){
         $uri = $request->getUri();
         $log = new Log($caso, (string)$uri);
         Log::GuardarLog($log);

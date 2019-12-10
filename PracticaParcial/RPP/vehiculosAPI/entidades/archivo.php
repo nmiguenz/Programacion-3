@@ -48,6 +48,7 @@
             $archivo->moveTo($destino);
             return $destino;
         }
+
         public static function LeerArchivo($ruta)
         {
             $lista = array();
@@ -67,6 +68,7 @@
             }
             return $lista;
         }
+        
         public static function HacerBackup($ruta, $elementoAModificar)
         {
       

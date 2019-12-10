@@ -1,22 +1,21 @@
 <?php
     class Vehiculo
     {
-        public $marca;
         public $patente;
+        public $marca;
         public $kms;
         public $rutaFoto;
         
-        public function __construct($marca, $patente, $kms, $foto)
+        public function __construct( $patente,$marca, $kms, $imagenes)
         {
             $this->marca = $marca;
             $this->patente = $patente;
             $this->kms = $kms;
-            $this->rutaFoto = $foto;
+            $this->rutaFoto = Archivo::GuardarArchivoTemporal($imagenes["imagenUno"], "./images/vehiculos/foto1", $patente, $marca);
         }
 
         //Manejo la fuente de datos acá:
-        public static function TraerVehiculos()
-        {
+        public static function TraerVehiculos(){
             $ruta = "./vehiculos.txt";
             
             $listaVehiculos = Archivo::LeerArchivo($ruta);
@@ -27,8 +26,7 @@
             return $listaVehiculos;
         }
 
-        public static function TraerUnVehiculo($patente)
-        {
+        public static function TraerUnVehiculo($patente){
             $ruta = "./vehiculos.txt";
             
             $listaVehiculos = Vehiculo::TraerVehiculos($ruta);
@@ -48,13 +46,14 @@
             }
             return $vehiculo;
         }
-        public static function GuardarVehiculo($vehiculo)
-        {
+        
+        public static function GuardarVehiculo($vehiculo){
             $ruta = "./vehiculos.txt";
 
             $vehiculoRepetido = false;
             
             $guardo = false;
+
             //Veo si está repetido
             if(file_exists($ruta))
             {
@@ -62,7 +61,7 @@
                 
                 foreach($listavehiculos as $auxVehiculo)
                 {
-                    if($auxVehiculo->patente == strtolower($vehiculo->patente))
+                    if(strtolower($auxVehiculo->patente) == strtolower($vehiculo->patente))
                     {
                         $vehiculoRepetido = true;
                         break;
@@ -80,8 +79,7 @@
             return $guardo;
         } 
     
-        public static function ValidarPatente($patente)
-        {
+        public static function ValidarPatente($patente){
             $validado = true;
             $listaVehiculos = Vehiculo::TraerVehiculos();
             if(is_array($listaVehiculos))
@@ -98,8 +96,7 @@
             return $validado;
         }
 
-        public static function ModificarVehiculo($elementoModificado)
-        {
+        public static function ModificarVehiculo($elementoModificado){
             $ruta = "./vehiculos.txt";
             $listaVehiculos = Vehiculo::TraerVehiculos();
 
@@ -151,8 +148,7 @@
         //     }
         // }
 
-        public static function CrearTabla($listaTurnos)
-        {
+        public static function CrearTabla($listaTurnos){
             $tablaTurnos = "<table>
                             <thead>
                                 <tr>

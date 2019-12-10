@@ -1,3 +1,8 @@
 {"id":null,"kms":"0","marca":"Fiat","patente":"AAA","foto":".\/images\/vehiculos\/foto1-AAA-Fiat-10-12-2019-1050.jpg"}
 {"kms":"0","marca":"Fiat","patente":"AAB","foto":".\/images\/vehiculos\/foto1-AAB-Fiat-10-12-2019-1052.jpg"}
 {"patente":"AAC","marca":"cHEVROLET","kms":"0","foto":".\/images\/vehiculos\/foto1-AAC-cHEVROLET-10-12-2019-1055.jpg"}
+{"marca":"AAU","patente":"cHEVROLET","kms":"0","rutaFoto":{"imagenUno":{"file":"D:\\Programas\\XAMPP\\tmp\\phpB63.tmp"}}}
+{"patente":"AAU","marca":"cHEVROLET","kms":"0","rutaFoto":{"imagenUno":{"file":"D:\\Programas\\XAMPP\\tmp\\php469F.tmp"}}}
+{"patente":"AAx","marca":"cHEVROLET","kms":"0","rutaFoto":{"imagenUno":{"file":"D:\\Programas\\XAMPP\\tmp\\phpF001.tmp"}}}
+{"patente":"AAF","marca":"cHEVROLET","kms":"0","rutaFoto":{"foto":{"file":"D:\\Programas\\XAMPP\\tmp\\phpD79A.tmp"}}}
+{"patente":"AAG","marca":"cHEVROLET","kms":"0","rutaFoto":".\/images\/vehiculos\/foto1-AAG-cHEVROLET-10-12-2019-1555.jpg"}

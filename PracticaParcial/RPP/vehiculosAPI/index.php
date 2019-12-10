@@ -17,6 +17,7 @@
         $this->post('/cargarTipoServicio', \vehiculosAPI::class . ':cargarTipoServicio');
         $this->get('/sacarTurno', \vehiculosAPI::class . ':sacarTurno');
         $this->get('/turnos', \vehiculosAPI::class . ':turnos');
+        $this->get('/servicios', \vehiculosAPI::class . ':servicios');
         // $this->delete('/borrarPizza', \PizzeriaAPI::class . ':borrarPizza');
         // $this->get('/logs', \PizzeriaAPI::class . ':consultarLog');
     });
