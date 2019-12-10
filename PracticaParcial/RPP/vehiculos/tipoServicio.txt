@@ -1,0 +1,4 @@
+null
+{"id":"1","tipo":"10000","precio":"500","demora":"30"}
+{"id":"2","tipo":"20000","precio":"500","demora":"30"}
+{"id":"3","tipo":"50000","precio":"1000","demora":"60"}

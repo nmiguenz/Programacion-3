@@ -1,0 +1,2 @@
+{"id":1,"email":"nmiguenz@gmail.com","precio":"150","tipo":"piedra","cantidad":"1","sabor":"muzza"}
+{"id":2,"email":"nmiguenz@gmail.com","precio":"150","tipo":"piedra","cantidad":"1","sabor":"muzza"}

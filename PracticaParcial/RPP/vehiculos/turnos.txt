@@ -1,0 +1,2 @@
+{"fecha":"lunes","patente":"aa243ob","marca":"Ford","precio":"500","tipoServicio":"10000"}
+{"fecha":"martes","patente":"aa243oz","marca":"Ford","precio":"1000","tipoServicio":"50000"}

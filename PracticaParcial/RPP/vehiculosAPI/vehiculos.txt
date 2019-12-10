@@ -1,0 +1,3 @@
+{"id":null,"kms":"0","marca":"Fiat","patente":"AAA","foto":".\/images\/vehiculos\/foto1-AAA-Fiat-10-12-2019-1050.jpg"}
+{"kms":"0","marca":"Fiat","patente":"AAB","foto":".\/images\/vehiculos\/foto1-AAB-Fiat-10-12-2019-1052.jpg"}
+{"patente":"AAC","marca":"cHEVROLET","kms":"0","foto":".\/images\/vehiculos\/foto1-AAC-cHEVROLET-10-12-2019-1055.jpg"}

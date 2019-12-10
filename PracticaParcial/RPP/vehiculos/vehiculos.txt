@@ -1,0 +1,2 @@
+{"marca":"Chevrolet","patente":"aa243oz","kms":"201","rutaFoto":".\/img\/archivo1575975801.jpg"}
+{"marca":"Ford","patente":"aa243oz","kms":"20000","rutaFoto":".\/img\/archivo1575948438.jpg"}

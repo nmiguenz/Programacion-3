@@ -1,0 +1,12 @@
+{"caso":"POST","hora":"10:51:13","ruta":"http:\/\/localhost\/Programacion-3\/PracticaParcial\/RPP\/vehiculosAPI\/cargarVehiculo"}
+{"caso":"POST","hora":"10:52:14","ruta":"http:\/\/localhost\/Programacion-3\/PracticaParcial\/RPP\/vehiculosAPI\/cargarVehiculo"}
+{"caso":"POST","hora":"10:52:58","ruta":"http:\/\/localhost\/Programacion-3\/PracticaParcial\/RPP\/vehiculosAPI\/cargarVehiculo"}
+{"caso":"POST","hora":"10:55:39","ruta":"http:\/\/localhost\/Programacion-3\/PracticaParcial\/RPP\/vehiculosAPI\/cargarVehiculo"}
+{"caso":"GET","hora":"11:13:43","ruta":"http:\/\/localhost\/Programacion-3\/PracticaParcial\/RPP\/vehiculosAPI\/consultarVehiculo?patente=AAC&marca="}
+{"caso":"GET","hora":"11:13:52","ruta":"http:\/\/localhost\/Programacion-3\/PracticaParcial\/RPP\/vehiculosAPI\/consultarVehiculo?patente=AAC&marca=Ford"}
+{"caso":"GET","hora":"11:16:28","ruta":"http:\/\/localhost\/Programacion-3\/PracticaParcial\/RPP\/vehiculosAPI\/consultarVehiculo?patente=&marca=Ford"}
+{"caso":"GET","hora":"11:16:35","ruta":"http:\/\/localhost\/Programacion-3\/PracticaParcial\/RPP\/vehiculosAPI\/consultarVehiculo?patente=&marca=chevrolet"}
+{"caso":"GET","hora":"11:16:42","ruta":"http:\/\/localhost\/Programacion-3\/PracticaParcial\/RPP\/vehiculosAPI\/consultarVehiculo?patente=&marca=fiat"}
+{"caso":"POST","hora":"11:50:19","ruta":"http:\/\/localhost\/Programacion-3\/PracticaParcial\/RPP\/vehiculosAPI\/cargarTipoServicio"}
+{"caso":"POST","hora":"11:50:27","ruta":"http:\/\/localhost\/Programacion-3\/PracticaParcial\/RPP\/vehiculosAPI\/cargarTipoServicio"}
+{"caso":"POST","hora":"11:50:37","ruta":"http:\/\/localhost\/Programacion-3\/PracticaParcial\/RPP\/vehiculosAPI\/cargarTipoServicio"}
