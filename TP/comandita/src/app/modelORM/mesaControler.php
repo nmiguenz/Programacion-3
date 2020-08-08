@@ -14,15 +14,17 @@ use Psr\Http\Message\ServerRequestInterface as Request;
 
 class mesaControler
 {
+    //Agrega una mesa a la lista. Con un codigo alfanumerico de 5 caracterres
+    //Solo puede hacerlo un superSU
     public function CargarUna($request, $response, $args){
         
         $datos = $request->getParsedBody();
         $token = $request->getHeader('token');
         
         $datosToken = AutentificadorJWT::ObtenerData($token[0]);     
-        $idEmpleado = $datosToken->id_empleado;
+        $idEmpleado = $datosToken->id_usuario;
     
-        $empleado = usuario::where('id_empleado', $idEmpleado)->first();
+        $empleado = usuario::where('id_usuario', $idEmpleado)->first();
         if(isset($datos['codigo_mesa']))
         {
 
@@ -57,15 +59,17 @@ class mesaControler
         return $newResponse;
     }
     
+    //Borra la mesa que le paso por ID en HEADER
+    //Solo puede hacerlo un SUPERSU
     public function BorrarMesa($request, $response, $args){
         
         $token = $request->getHeader('token');
         $idMesa = $request->getAttribute('idMesa');
         
         $datosToken = AutentificadorJWT::ObtenerData($token[0]);     
-        $idEmpleado = $datosToken->id_empleado;
+        $idEmpleado = $datosToken->id_usuario;
         
-        $empleado = usuario::where('id_empleado', $idEmpleado)->first();
+        $empleado = usuario::where('id_usuario', $idEmpleado)->first();
         
         $mesa = mesa::where('id', $idMesa)->first();
         
@@ -84,6 +88,8 @@ class mesaControler
         return $newResponse;
     }
     
+    //Un SUPERSU puede modificar el ESTADO o el Codigo_UNICO de la mesa
+    //ESTADOS: “con cliente esperando pedido” ,”con clientes comiendo”, “con clientes pagando” y “cerrada”
     public function ModificarMesa($request, $response, $args){
         
         $token = $request->getHeader('token');
@@ -91,8 +97,8 @@ class mesaControler
         $datos = $request->getParsedBody();
     
         $datosToken = AutentificadorJWT::ObtenerData($token[0]);   
-        $idEmpleado = $datosToken->id_empleado;
-        $empleado = usuario::where('id_empleado', $idEmpleado)->first();
+        $idEmpleado = $datosToken->id_usuario;
+        $empleado = usuario::where('id_usuario', $idEmpleado)->first();
         
         $mesa = mesa::where('id', $idMesa)->first();
         
@@ -120,14 +126,17 @@ class mesaControler
         return $newResponse;
     }
 
+    //Si la mesa tiene un ESTADO != 'cerrada', lo cambia a este
+    //Solo puede hacerlo un SUPERSU
+    //Cuando se cierra RESETEA el CODIGO_UNICO
     public function CerrarMesa($request, $response, $args){
         $token = $request->getHeader('token');
         $idMesa = $request->getAttribute('idMesa');
         //$idPedido = $request->getAttribute('idPedido');
        
         $datosToken = AutentificadorJWT::ObtenerData($token[0]);     
-        $idEmpleado = $datosToken->id_empleado;
-        $empleado = usuario::where('id_empleado', $idEmpleado)->first();
+        $idEmpleado = $datosToken->id_usuario;
+        $empleado = usuario::where('id_usuario', $idEmpleado)->first();
         
         $mesa = mesa::where('id', $idMesa)->first();
         $estado = strtolower($mesa->estado);
@@ -156,6 +165,9 @@ class mesaControler
         return $newResponse;
     }
 
+    //Solo puede hacerlo el ADMIN
+    //Modificar listado
+    //La mesa se considera usada despues de haber sido facturada
     public function ConsultarMesas($request, $response, $args)
     {
         $listado = $request->getParam('listado');
@@ -208,14 +220,14 @@ class mesaControler
                 ->select('id_mesa', 'monto')
                 ->first();
             break; 
-            case "entre_dos_fechas":
-                if($idMesa != null)
-                {
-                    $informacion = factura::where('id_mesa', $idMesa)
-                    ->where('hora', '>=', $fechaInicio)
-                    ->where('hora', '<=', $fechaFin)
-                    ->get();
-                }
+            // case "entre_dos_fechas":
+            //     if($idMesa != null)
+            //     {
+            //         $informacion = factura::where('id_mesa', $idMesa)
+            //         ->where('hora', '>=', $fechaInicio)
+            //         ->where('hora', '<=', $fechaFin)
+            //         ->get();
+            //     }
             break;               
             case "mejores_comentarios":
                 $informacion = encuesta::select('id_cliente', 'texto_experiencia')

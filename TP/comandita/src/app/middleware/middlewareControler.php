@@ -11,9 +11,9 @@ class Middleware
     public static function validarUsuarioSocio($request, $response, $next){
         $token = $request->getHeader('token');
         $datos = AutentificadorJWT::ObtenerData($token[0]);
-        $id = $datos->id_empleado;
+        $id = $datos->id_usuario;
         
-        $usuario = usuario::where('id_empleado', $id)->first();
+        $usuario = usuario::where('id_usuario', $id)->first();
         if($usuario != null)
         {
             //Compruebo la clave:
@@ -51,9 +51,9 @@ class Middleware
     public function ValidarMozo($request, $response, $next){
         $token = $request->getHeader('token');
         $datos = AutentificadorJWT::ObtenerData($token[0]);
-        $id = $datos->id_empleado;
+        $id = $datos->id_usuario;
         
-        $usuario = usuario::where('id_empleado', $id)->first();
+        $usuario = usuario::where('id_usuario', $id)->first();
         if($usuario != null)
         {
             //Compruebo la clave:
@@ -91,9 +91,9 @@ class Middleware
     public function ValidarAdmin($request, $response, $next){
         $token = $request->getHeader('token');
         $datos = AutentificadorJWT::ObtenerData($token[0]);
-        $id = $datos->id_empleado;
+        $id = $datos->id_usuario;
         
-        $usuario = usuario::where('id_empleado', $id)->first();
+        $usuario = usuario::where('id_usuario', $id)->first();
         if($usuario != null)
         {
             //Compruebo la clave:
@@ -131,9 +131,9 @@ class Middleware
     public function ValidarSuperSU($request, $response, $next){
         $token = $request->getHeader('token');
         $datos = AutentificadorJWT::ObtenerData($token[0]);
-        $id = $datos->id_empleado;
+        $id = $datos->id_usuario;
         
-        $usuario = usuario::where('id_empleado', $id)->first();
+        $usuario = usuario::where('id_usuario', $id)->first();
         if($usuario != null)
         {
             //Compruebo la clave:

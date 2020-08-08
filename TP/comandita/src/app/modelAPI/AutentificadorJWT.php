@@ -51,8 +51,7 @@ class AutentificadorJWT
         }
     }
     
-   
-     public static function ObtenerPayLoad($token)
+    public static function ObtenerPayLoad($token)
     {
         return JWT::decode(
             $token,
@@ -60,7 +59,8 @@ class AutentificadorJWT
             self::$tipoEncriptacion
         );
     }
-     public static function ObtenerData($token)
+     
+    public static function ObtenerData($token)
     {
         return JWT::decode(
             $token,
@@ -68,6 +68,7 @@ class AutentificadorJWT
             self::$tipoEncriptacion
         )->data;
     }
+    
     private static function Aud()
     {
         $aud = '';
